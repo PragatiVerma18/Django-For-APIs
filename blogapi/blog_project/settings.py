@@ -74,7 +74,7 @@ TEMPLATES = [
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CALSSES': [
-        'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticated',
     ]
 }
 
