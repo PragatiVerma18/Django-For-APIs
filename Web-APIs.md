@@ -1,5 +1,4 @@
-##
-URL
+## URL
 A **URL(Uniform Resource Locator)** is the address of a resource on the internet. For example, the Google homepage lives at `https://www.google.com`.
 
 Every URL like `https://python.org/about/` has three potential parts:
