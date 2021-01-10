@@ -46,3 +46,45 @@ Let’s review the basic flow:
 - The cookie is sent out for every single request, even those that don’t require authentication, which is inefficient. 
 
 > **Note:** It is generally not advised to use a session-based authentication scheme for any API that will have multiple front-ends.
+
+## Token Authentication
+
+Token-based authentication is **stateless**: once a client sends the initial user credentials to the server, a unique token is generated and then stored by the client as either a cookie or in local storage. This token is then passed in the header of each incoming HTTP request and the server uses it to verify that a user is authenticated. 
+
+> ### The server itself does not keep a record of the user, just whether a token is valid or not.
+
+### Cookies vs localStorage
+
+```
+- Cookies are used for reading server-side information. 
+They are smaller (4KB) in size and automatically sent with each HTTP request. 
+
+- LocalStorage is designed for client-side information. 
+It is much larger (5120KB) and its contents are not sent by default with each HTTP request.
+
+Tokens stored in both cookies and localStorage are vulnerable to XSS attacks. 
+The current best practice is to store tokens in a cookie with the httpOnly and Secure cookie flags.
+```
+
+**Note:** The HTTP header **WWW-Authenticate** specifies the use of a Token which is used in the response Authorization header request.
+
+**Pros:**
+- Since tokens are stored on the client, scaling the servers to maintain up-to-date session objects is no longer an issue.
+- Tokens can be shared amongst multiple front-ends: the same token can represent a user on the website and the same user on a mobile app.
+
+**Cons:**
+- A token contains all user information, not just an id as with a session id/session object set up. Since the token is sent on every request, managing its size can become a performance issue.
+
+**Django REST Framework's built-in TokenAuthentication:**
+- It doesn't support setting tokens to expire
+- It only generates one token per user
+
+## JSON Web Tokens(JWTs):
+
+**JSON Web Tokens (JWTs)** are a new, enhanced version of tokens that can be added to Django REST Framework via several third-party packages. 
+
+- JWTs have several benefits including the ability to generate **unique client tokens** and **token expiration**. 
+- They can either be generated on the server or with a third-party service like Auth0. 
+- And JWTs can be **encrypted** which makes them **safer** to send over unsecured HTTP connections.
+
+---
