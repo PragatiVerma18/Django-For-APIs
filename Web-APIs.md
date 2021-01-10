@@ -65,4 +65,9 @@ Any RESTful API must, at a minimum, have these three principles. The standard is
 
 > Ultimately a web API is a collection of endpoints that expose certain parts of an underlying database. As developers we control the URLs for each endpoint, what underlying data is available, and what actions are possible via HTTP verbs. 
 
+## API Schema and Documentation
+A **schema** is a machine-readable document that outlines all available API endpoints, URLs, and the HTTP verbs (GET, POST, PUT, DELETE, etc.) they support. 
+
+**Documentation** is something added to a schema that makes it easier for humans to read and consume.
+
 ---
