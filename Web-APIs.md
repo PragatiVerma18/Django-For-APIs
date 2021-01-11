@@ -42,6 +42,21 @@ HTTP is a request-response protocol between two computers that have an existing 
 
 > Every HTTP message consists of a request/status line, headers, and optional body data.
 > The default port for HTTP is 80.
+> Data in a GET request is sent as part of the URL and this has a limit of 2048 characters.
+
+
+## HTTP vs HTTPS
+HTTPS stands for Hypertext Transfer Protocol Secure (also referred to as HTTP over TLS or HTTP over SSL). HTTPS also uses TCP (Transmission Control Protocol) to send and receive data packets, but it does so over port 443, within a connection encrypted by Transport Layer Security (TLS). Generally sites running over HTTPS will have a redirect in place so even if you type in `http://` it will redirect to deliver over a secured connection.
+
+**Key Differences:**
+
+- HTTP is unsecured while HTTPS is secured.
+- HTTP sends data over port 80 while HTTPS uses port 443.
+- HTTP operates at application layer, while HTTPS operates at transport layer.
+- No SSL certificates are required for HTTP, with HTTPS it is required that you have an SSL certificate and it is signed by a CA.
+- HTTP doesn't require domain validation, where as HTTPS requires at least domain validation and certain certificates even require legal document validation.
+- No encryption in HTTP, with HTTPS the data is encrypted before sending.
+
 
 ## Status Codes
 
@@ -54,6 +69,19 @@ General type of status code based on the following system:
 • **4xx Client Error** - there was an error, typically a bad URL request by the client
 
 • **5xx Server Error** - the server failed to resolve a request 
+
+## Common HTTP Request Headers
+- Browsers sends a `User-Agent` request header along with HTTP requests to denote the software it’s using.
+- `Last-Modified` response header is sent by the server to specify the last modified date of the requested resource.
+- `If-Modified-Since` request header is sent by the browser to specify the last modified date of the cached copy of the resource (saved in the browser). The value of this header is same as the value of the previously received `Last-Modified` header.
+> The purpose of using above headers is to avoid unnecessary transferring of a resource if it has not been changed since the last access, hence saving bandwidth and improving performance.
+
+## HTTP/2 & HTTP/1.1
+The first usable version of HTTP was created in 1997. Because it went through several stages of development, this first version of HTTP was called `HTTP/1.1`. This version is still in use on the web. In 2015, a new version of HTTP called `HTTP/2` was created.
+
+HTTP/2 solves several problems that the creators of HTTP/1.1 did not anticipate. In particular, HTTP/2 is much faster and more efficient than HTTP/1.1. One of the ways in which HTTP/2 is faster is in how it **prioritizes** content during the loading process.
+
+> Read more [here](https://www.cloudflare.com/learning/performance/http2-vs-http1.1)
 
 ## REST
 **REpresentational State Transfer (REST)** is an approach to building APIs on top of the web, which means on top of the HTTP protocol.
