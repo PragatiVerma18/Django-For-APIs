@@ -28,6 +28,9 @@ Once the TCP connection is established, the two computers can start communicatin
 ### HTTP Verbs
 Every webpage contains both an address (the URL) as well as a list of approved actions known as **HTTP verbs**.
 
+![ME_ME_HTTP_MODULE_ME_HTTP_MODULE_BYTE1_image_12](https://user-images.githubusercontent.com/42115530/104155356-08919a00-540d-11eb-94f8-316e8f591177.png)
+
+
 ### Endpoints
 A web API has **endpoints** - URLs with a list of available actions (HTTP verbs) that expose data (typically in JSON, which is the most common data format these days and the default for Django REST Framework).
 
