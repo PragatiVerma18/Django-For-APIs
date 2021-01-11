@@ -30,6 +30,7 @@ Every webpage contains both an address (the URL) as well as a list of approved a
 
 ![ME_ME_HTTP_MODULE_ME_HTTP_MODULE_BYTE1_image_12](https://user-images.githubusercontent.com/42115530/104155356-08919a00-540d-11eb-94f8-316e8f591177.png)
 
+> **Note:** **PUT method is idempotent**. So if you send retry a request multiple times, that should be equivalent to single request modification. POST is NOT idempotent. So if you retry the request N times, you will end up having N resources with N different URIs created on server.
 
 ### Endpoints
 A web API has **endpoints** - URLs with a list of available actions (HTTP verbs) that expose data (typically in JSON, which is the most common data format these days and the default for Django REST Framework).
@@ -40,6 +41,7 @@ A web API has **endpoints** - URLs with a list of available actions (HTTP verbs)
 HTTP is a request-response protocol between two computers that have an existing TCP connection. The computer making the requests is known as the _client_ while the computer responding is known as the _server_. 
 
 > Every HTTP message consists of a request/status line, headers, and optional body data.
+> The default port for HTTP is 80.
 
 ## Status Codes
 
