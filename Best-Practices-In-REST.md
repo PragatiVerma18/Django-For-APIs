@@ -106,7 +106,9 @@ When it comes to naming resources in a program, there are 3 main types of case c
 
 - **CamelCase:** ineffective in contexts that are not case sensitive
 - **snake_case:** its popularity has decreased due to a lot of abuses in C programs with over-extended or too short names
-- **spinal_case:** most commonly used and traditional way of naming folders and files in UNIX and Linux systems
+- **spinal-case:** most commonly used and traditional way of naming folders and files in UNIX and Linux systems
+
+> It is recommended to use the spinal-case (which is highlighted by RFC3986 - the specification for URL syntax), this case is used by Google, PayPal, and other big companies.
 
 ### PUT vs PATCH
 A `PUT` request will replace the entire content of the resource at the location while a `PATCH` request, on the other hand, is used to make changes to a part of the resource at a location.
