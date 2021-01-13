@@ -15,6 +15,8 @@ These are important notes and code snippets from the book that help in extending
 | [User Authentication](https://github.com/PragatiVerma18/Django-For-APIs/blob/master/Auth.md)    |     Types of User Authentication Methods            |
 | [Token Authentication](https://github.com/PragatiVerma18/Django-For-APIs/blob/master/Token-Auth.md)| How to implement Token Authentication in DRF? |
 | [Viewsets and Routers](https://github.com/PragatiVerma18/Django-For-APIs/blob/master/Viewsets-and-Routers.md) | What are Viewsets and Routers?|
+| [Best Practices In REST](https://github.com/PragatiVerma18/Django-For-APIs/blob/master/Best-Practices-In-REST.md) | Best Practices for API Design |
+| [Cookies vs LocalStorage](https://github.com/PragatiVerma18/Django-For-APIs/blob/master/Cookies-vs-LocalStorage.md) | Differences in Cookies & Local Storage |
 
 
 
