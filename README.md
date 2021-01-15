@@ -3,7 +3,7 @@ Django for APIs is a project-based guide to building modern APIs with Django & D
 
 <img src="https://d33wubrfki0l68.cloudfront.net/3420239cabb6474c0b9b3e85688475825c8a5de0/c3295/assets/images/cover31.jpg" alt="Django For APIs" height="500" width="400"/>
 
-> Find the book [here](https://pdf.zlibcdn.com/dtoken/db66c41643295250965685979efbb2a7/Django_for_APIs_Build_Web_APIs_with_Python__Djan_5288428_(z-lib.org).pdf)
+> Find the book [here](https://djangoforapis.com/)
 
 # Important Notes
 These are important notes and code snippets from the book that help in extending any existing Django website into web API with minimal effort, covering everything from scratch to hosting and API documentation.
