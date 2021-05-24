@@ -5,6 +5,8 @@ Django for APIs is a project-based guide to building modern APIs with Django & D
 
 > Find the book [here](https://djangoforapis.com/)
 
+> Here's a template for your upcoming DRF projects by [William S. Vincent](https://github.com/wsvincent) - [https://github.com/wsvincent/drfx](https://github.com/wsvincent/drfx)
+
 # Important Notes
 These are important notes and code snippets from the book that help in extending any existing Django website into web API with minimal effort, covering everything from scratch to hosting and API documentation.
 
